@@ -6,7 +6,7 @@
  */
 
 import React from 'react';
-import {AppStack} from './src/navigation/AppStack.tsx';
+import {AppStack} from '@navigation/AppStack';
 
 function App(): React.JSX.Element {
   return <AppStack />;

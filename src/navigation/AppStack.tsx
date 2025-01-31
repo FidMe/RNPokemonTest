@@ -2,12 +2,12 @@ import React from 'react';
 import {createStaticNavigation} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 
-import {PokemonsScreen} from '../screens/pokemons';
+import {PokemonsScreen} from '@screens/pokemons';
 
 const RootStack = createStackNavigator({
-  initialRouteName: 'Pokemons',
+  initialRouteName: 'Pokedex',
   screens: {
-    Pokemons: PokemonsScreen,
+    Pokedex: PokemonsScreen,
   },
 });
 
