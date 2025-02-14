@@ -4,9 +4,10 @@ This small exercice is just meant to challenge new FidMe appliants.
 
 ### Get started !
 
--   Clone this repo (do **not** fork it)
--   Install react native & ruby if you haven't (any version will do fine, just edit the .ruby-version file with the proper version)
--   Run `yarn up && yarn android`
+- Clone this repo 
+- Create a new branch
+- Setup your environment by follow the [official documentation](https://reactnative.dev/docs/set-up-your-environment)
+- Run `yarn install && yarn android`
 
 ### The challenge
 
