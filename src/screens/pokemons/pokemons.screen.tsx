@@ -29,18 +29,38 @@ const PokemonsScreen = () => {
   }, [])
 
   return (
-    <View style={styles.container}>
-      <Text>Pokemon list screen</Text>
-    </View>
+    <SafeAreaProvider>
+      <SafeAreaView>
+        <Image style={styles.pokeballImage} source={require('@assets/pokeball.png')} />
+        <FlatList 
+          data={pokemons}
+          columnWrapperStyle={styles.listColumnWrapper}
+          contentContainerStyle={styles.listContainer}
+          numColumns={2}
+          renderItem={(item) => <PokemonCard pokemon={item.item} />}
+          onEndReached={getPokemon} 
+          keyExtractor={item => item.id.toString()}/>
+      </SafeAreaView>
+    </SafeAreaProvider>
   );
 };
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+  pokeballImage: {
+    position: 'absolute',
+    right: -50,
+    top: -50,
+    width: 200,
+    height: 200,
+    opacity: 0.1
   },
-});
+  listContainer: {
+    paddingTop: 70
+  },
+  listColumnWrapper: {
+    paddingVertical: 10,
+    justifyContent: 'space-evenly'
+  }
+})
 
 export {PokemonsScreen};
